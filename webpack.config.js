@@ -12,7 +12,13 @@ module.exports = {
             new CssMinimizerPlugin(),
         ],
     },
-
+    devServer: {
+        static: {
+          directory: path.resolve(__dirname, 'dist'),
+        },
+        compress: true,
+        port: 4200,
+      },
     plugins: [
         new HTMLPlugin({
             filename: 'index.html',
