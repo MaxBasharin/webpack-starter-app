@@ -10981,42 +10981,46 @@ var __webpack_exports__ = {};
 "use strict";
 
 ;// CONCATENATED MODULE: ./src/modules/app.service.js
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 /* в качестве экспорта экспортируется класс*/
-class AppService { 
-    constructor(text){
-        this.text = text
+var AppService = /*#__PURE__*/function () {
+  function AppService(text) {
+    _classCallCheck(this, AppService);
+    this.text = text;
+  }
+  _createClass(AppService, [{
+    key: "log",
+    value: function log() {
+      console.log('[App service]:', this.text);
     }
+  }]);
+  return AppService;
+}();
 
-    log() {
-        console.log('[App service]:', this.text)
-    }
-}
 ;// CONCATENATED MODULE: ./src/modules/config.js
 /* в качестве экспорта экспортируется объект*/
-const config = { 
-    key: '123456'
-}
+var config = {
+  key: '123456'
+};
 // EXTERNAL MODULE: ./node_modules/jquery/dist/jquery.js
 var jquery = __webpack_require__(755);
 var jquery_default = /*#__PURE__*/__webpack_require__.n(jquery);
 ;// CONCATENATED MODULE: ./src/modules/header.component.js
 
-
-jquery_default()('<h1 />')
-.text('jquery')
-.css({
-    textAlign: 'center',
-    color: 'blue'
-})
-.appendTo(jquery_default()('header'))
+jquery_default()('<h1 />').text('jquery').css({
+  textAlign: 'center',
+  color: 'blue'
+}).appendTo(jquery_default()('header'));
 ;// CONCATENATED MODULE: ./src/index.js
 
 
 
 
-console.log('config key', config.key)
-const service = new AppService('export class')
-service.log()
+console.log('config key', config.key);
+var service = new AppService('export class');
+service.log();
 })();
 
 /******/ })()
